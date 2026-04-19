@@ -1146,7 +1146,7 @@
     btn.disabled = true;
     btn.innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div> Sending...';
 
-    if (WEBHOOK_URL === 'YOUR_MAKE_WEBHOOK_URL_HERE') {
+    if (WEBHOOK_URL !== "YOUR_MAKE_WEBHOOK_URL_HERE") {
       try {
         await fetch(WEBHOOK_URL, {
           mode: "no-cors",
