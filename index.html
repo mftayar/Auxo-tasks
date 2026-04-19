@@ -945,7 +945,7 @@
 </div>
 
 <script>
-  const WEBHOOK_URL = 'https://hook.us2.make.com/2odinrlhcv1qpjmhxdtpmywk40imlfk3';
+  const WEBHOOK_URL = 'https://hook.us2.make.com/2odinrlhcv1qpjmhxdtpmywk40imlfk3fk3';
 
   let currentMode = 'text';
   let isRecording = false;
@@ -1149,6 +1149,7 @@
     if (WEBHOOK_URL === 'YOUR_MAKE_WEBHOOK_URL_HERE') {
       try {
         await fetch(WEBHOOK_URL, {
+          mode: "no-cors",
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message, categories, source: currentMode, timestamp: new Date().toISOString(), sender: 'Lauren — Auxo' })
